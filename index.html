@@ -4,24 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RecipeJS - Your Functional Cooking Companion</title>
-    <!-- Link CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header Section -->
     <header>
         <h1>🍳 RecipeJS</h1>
         <p>Your Functional Cooking Companion</p>
     </header>
 
-    <!-- Main Content -->
     <main>
+        <!-- NEW: Filter and Sort Controls -->
+        <div class="controls">
+            <div class="filter-group">
+                <h3>Filter by Difficulty:</h3>
+                <div class="button-group">
+                    <button class="filter-btn active" data-filter="all">Show All</button>
+                    <button class="filter-btn" data-filter="easy">Easy</button>
+                    <button class="filter-btn" data-filter="medium">Medium</button>
+                    <button class="filter-btn" data-filter="hard">Hard</button>
+                    <button class="filter-btn" data-filter="quick">Quick (< 30 min)</button>
+                </div>
+            </div>
+
+            <div class="sort-group">
+                <h3>Sort by:</h3>
+                <div class="button-group">
+                    <button class="sort-btn active" data-sort="none">Default Order</button>
+                    <button class="sort-btn" data-sort="name">Name (A-Z)</button>
+                    <button class="sort-btn" data-sort="time">Time (Fastest First)</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recipe Container (unchanged) -->
         <div id="recipe-container">
             <!-- Recipe cards will be rendered here by JavaScript -->
         </div>
     </main>
 
-    <!-- Link JavaScript (placed at the end of body) -->
     <script src="app.js"></script>
 </body>
 </html>
